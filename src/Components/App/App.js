@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { getTopStories } from './apiCalls';
+import { getTopStories } from '../../apiCalls';
+import Articles from '../Articles/Articles';
 
 const App = () => {
   const [ articles, setArticles ] = useState([])
@@ -9,9 +10,19 @@ const App = () => {
     getTopStories()
     .then(data => {
       console.log(data, 'DA')
-      setArticles([...articles, data])
+      setArticles(data.results)
     })
-  })
+  },[])
+
+  return (
+    <div>
+      <Articles newArticles={articles}/> 
+      
+
+    </div>
+
+
+  )
 }
 
 export default App;
