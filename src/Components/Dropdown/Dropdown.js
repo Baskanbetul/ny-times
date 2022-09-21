@@ -1,7 +1,7 @@
 import React from "react";
 import "./Dropdown.css"
 
-const Dropdown = ({ category, getCategory }) => {
+const Dropdown = ({ getCategory }) => {
   return (
     <div className="menu-container">
       <label htmlFor="categories">Choose a category:</label>
@@ -10,8 +10,9 @@ const Dropdown = ({ category, getCategory }) => {
         name="categories"
         // value={category}
         onChange={(event) => {
+          let value = event.target.value;
           // console.log(event.target.value,"VALUE")
-          getCategory(event)
+          getCategory(value)
         }}
       >
         <option value="arts">Arts</option>

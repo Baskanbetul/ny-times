@@ -17,13 +17,15 @@ const App = () => {
   useEffect(() => {
     // !category.length ? setCategory('home') : 
     // !category.length && setCategory('home') 
-    // if (category === '' ) {
-    //     setCategory('home')
+    // let category = getCategory();
+    // if (!category) {
+    //   category = 'home'
     // }
-    getTopStories('home')
+    console.log('REQUEST', category)
+    getTopStories(category)
     .then(data => {
       // console.log(data, 'DA')
-      setArticles(data.results)
+      setArticles([...data.results])
     })
   },[])
 
@@ -37,10 +39,12 @@ const App = () => {
     })
   }
 
-  const getCategory = (event) => {
+  const getCategory = (value) => {
+    value ? 
     // console.log(event.target.value, "TARGET")
-    setCategory(event.target.value)
-    console.log(category, "CAT")
+    setCategory(value) : setCategory('home')
+    console.log(value, "CAT")
+    return value
   }
 
   return (
@@ -49,7 +53,7 @@ const App = () => {
       {isError ? <Error /> : 
         <main className='App'>
           <Route exact path='/'>
-            <Dropdown category={category} getCategory={getCategory}/>
+            <Dropdown getCategory={getCategory}/>
             <Articles newArticles={articles} selectArticle={selectArticle}/>  
           </Route>
           <Route exact path={'/details'}>
