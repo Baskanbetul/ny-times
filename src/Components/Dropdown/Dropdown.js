@@ -1,15 +1,18 @@
 import React from "react";
 import "./Dropdown.css"
 
-const Dropdown = ({ categorie, getCategorie }) => {
+const Dropdown = ({ category, getCategory }) => {
   return (
     <div className="menu-container">
-      <label htmlFor="categories">Choose a categorie:</label>
+      <label htmlFor="categories">Choose a category:</label>
       <select
         id="categories"
         name="categories"
-        // value={categorie}
-        onChange={(event) => getCategorie(event.target.value)}
+        // value={category}
+        onChange={(event) => {
+          // console.log(event.target.value,"VALUE")
+          getCategory(event)
+        }}
       >
         <option value="arts">Arts</option>
         <option value="automobiles">Automobiles</option>

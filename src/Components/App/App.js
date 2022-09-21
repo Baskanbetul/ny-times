@@ -11,13 +11,18 @@ import Error from '../Error/Error';
 const App = () => {
   const [ articles, setArticles ] = useState([]);
   const [ singleArticle, setSingleArticle ] = useState([]);
-  const [ categorie, setCategorie ] = useState('home')
+  const [ category, setCategory ] = useState('')
   const [ isError, setIsError ] = useState(false);
 
   useEffect(() => {
-    getTopStories(categorie)
+    // !category.length ? setCategory('home') : 
+    // !category.length && setCategory('home') 
+    // if (category === '' ) {
+    //     setCategory('home')
+    // }
+    getTopStories('home')
     .then(data => {
-      console.log(data, 'DA')
+      // console.log(data, 'DA')
       setArticles(data.results)
     })
   },[])
@@ -32,9 +37,10 @@ const App = () => {
     })
   }
 
-  const getCategorie = (event) => {
-    console.log(event.target.value, "TARGET")
-    setCategorie(event.target.value)
+  const getCategory = (event) => {
+    // console.log(event.target.value, "TARGET")
+    setCategory(event.target.value)
+    console.log(category, "CAT")
   }
 
   return (
@@ -43,7 +49,7 @@ const App = () => {
       {isError ? <Error /> : 
         <main className='App'>
           <Route exact path='/'>
-            <Dropdown categorie={categorie} getCategorie={getCategorie}/>
+            <Dropdown category={category} getCategory={getCategory}/>
             <Articles newArticles={articles} selectArticle={selectArticle}/>  
           </Route>
           <Route exact path={'/details'}>
