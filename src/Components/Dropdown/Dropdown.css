@@ -1,0 +1,7 @@
+.menu-container {
+  display: flex;
+  color: rgb(54, 75, 144);
+  margin-top: -3em;
+  font-size: 3em;
+  justify-content: center;
+}

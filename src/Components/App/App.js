@@ -7,6 +7,9 @@ import DetailsCard from '../DetailsCard/DetailsCard';
 import Dropdown from '../Dropdown/Dropdown';
 import Error from '../Error/Error';
 
+import './App.css';
+
+
 const App = () => {
   const [ articles, setArticles ] = useState([]);
   const [ singleArticle, setSingleArticle ] = useState({});
