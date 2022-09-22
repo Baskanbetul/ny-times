@@ -34,7 +34,8 @@ const App = () => {
   return (
     <>
     <Header />
-      {isError ? <Error /> : 
+    <Switch>
+      {/* {isError ? <Error /> :  */}
         <main className='App'>
           <Route exact path='/'>
             <Dropdown getCategory={getCategory}/>
@@ -43,8 +44,12 @@ const App = () => {
           <Route exact path={'/details'}>
             <DetailsCard singleArticle={singleArticle}/>
           </Route>
+          <Route path='*'>
+            <Error />
+          </Route>
         </main>  
-      }
+      {/* } */}
+      </Switch>
     
       </>
   )
