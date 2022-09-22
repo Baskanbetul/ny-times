@@ -9,11 +9,7 @@ const Dropdown = ({ getCategory }) => {
         id="categories"
         name="categories"
         // value={category}
-        onChange={(event) => {
-          let value = event.target.value;
-          // console.log(event.target.value,"VALUE")
-          getCategory(value)
-        }}
+        onChange={(event) => getCategory(event.target.value)}
       >
         <option value="arts">Arts</option>
         <option value="automobiles">Automobiles</option>

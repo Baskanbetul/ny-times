@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ArticlesCard.css';
 
-const ArticlesCard = ( {title, byline, multimedia, url, selectArticle} ) => {
+const ArticlesCard = ( {title, byline, multimedia, selectArticle} ) => {
   return (
+
       <div className='articles-card'>
         <b className='title'>{title}</b>
         <Link to ='/'>
@@ -13,6 +14,7 @@ const ArticlesCard = ( {title, byline, multimedia, url, selectArticle} ) => {
         </Link> 
         <b className='byline'>{byline}</b> 
       </div>
+
   )
 }
 

@@ -3,7 +3,7 @@ import './Error.css';
 
 const Error = () => {
     return (
-        <p className='error'>Something went wrong... please refresh the page!</p>
+        <p className='error'>Something went wrong... please try again!</p>
     )
 }
   
