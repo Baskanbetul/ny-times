@@ -5,7 +5,7 @@ const Dropdown = ({ getCategory }) => {
   return (
     <div className="menu-container">
       <label htmlFor="categories">Choose a category:</label>
-      <select
+      <select className='dropdown'
         id="categories"
         name="categories"
         // value={category}
