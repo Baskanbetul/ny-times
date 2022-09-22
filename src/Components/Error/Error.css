@@ -1,0 +1,6 @@
+.error {
+  display: flex;
+  justify-content: center;
+  font-family: 'Lora', serif;
+  font-size: 35px;
+}

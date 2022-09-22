@@ -1,5 +1,30 @@
- 
 .article-card {
   height: 500px;
   width: 500px;
+}
+
+.title {
+  color: rgb(168, 33, 33);
+  font-size: x-large;
+  margin: auto;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+.byline {
+  color: rgb(53, 168, 33);
+  font-size: x-large;
+  margin: auto;
+  margin-left: 55%;
+  margin-top: 5%;
+}
+
+.article-img {
+  height: 30vw;
+  width: 35vw;
+  border:1px solid #7d5c5c; 
+  margin-top: 5%;
+  margin-left: 25%;
+  border-radius: 20px;
+  animation: wiggle 2s linear
 }
