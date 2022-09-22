@@ -10,41 +10,25 @@ import Error from '../Error/Error';
 
 const App = () => {
   const [ articles, setArticles ] = useState([]);
-  const [ singleArticle, setSingleArticle ] = useState([]);
-  const [ category, setCategory ] = useState('')
-  const [ isError, setIsError ] = useState(false);
+  const [ singleArticle, setSingleArticle ] = useState({});
+  const [ category, setCategory ] = useState('home')
+  const [ isError, setIsError ] = useState();
 
-  useEffect(() => {
-    // !category.length ? setCategory('home') : 
-    // !category.length && setCategory('home') 
-    // let category = getCategory();
-    // if (!category) {
-    //   category = 'home'
-    // }
-    console.log('REQUEST', category)
-    getTopStories(category)
+  const getCategory = (category) => {
+    getTopStories(category) 
     .then(data => {
-      // console.log(data, 'DA')
-      setArticles([...data.results])
-    })
-  },[])
-
-  const selectArticle = (event) => {
-    // console.log(event.target.src, "EV")
-    return articles.find(article => {
-      // console.log(article.url, "ART")
-      if (event.target.src === article.url) {
-        setSingleArticle(article)
-      }
+    setArticles(data.results)
     })
   }
 
-  const getCategory = (value) => {
-    value ? 
-    // console.log(event.target.value, "TARGET")
-    setCategory(value) : setCategory('home')
-    console.log(value, "CAT")
-    return value
+  useEffect(() => {
+    getCategory(category);  
+  },[category])
+
+  const selectArticle = (event) => {
+    // console.log(event.target.src, "EV")
+    let selection = articles.find(article => event.target.src === article.multimedia[1].url)
+    setSingleArticle(selection)
   }
 
   return (
