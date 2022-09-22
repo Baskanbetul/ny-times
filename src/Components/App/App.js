@@ -7,12 +7,10 @@ import DetailsCard from '../DetailsCard/DetailsCard';
 import Dropdown from '../Dropdown/Dropdown';
 import Error from '../Error/Error';
 
-
 const App = () => {
   const [ articles, setArticles ] = useState([]);
   const [ singleArticle, setSingleArticle ] = useState({});
   const [ category, setCategory ] = useState('home')
-  const [ isError, setIsError ] = useState();
 
   const getCategory = (category) => {
     getTopStories(category) 
@@ -22,31 +20,32 @@ const App = () => {
   }
 
   useEffect(() => {
-    getCategory(category);  
+    getCategory(category) 
   },[category])
 
   const selectArticle = (event) => {
-    // console.log(event.target.src, "EV")
     let selection = articles.find(article => event.target.src === article.multimedia[1].url)
     setSingleArticle(selection)
   }
 
   return (
     <>
-    <Header />
-      {isError ? <Error /> : 
-        <main className='App'>
+      <Header />
+      <main className='App'>
+        <Switch>
           <Route exact path='/'>
             <Dropdown getCategory={getCategory}/>
             <Articles newArticles={articles} selectArticle={selectArticle}/>  
           </Route>
-          <Route exact path={'/details'}>
+          <Route exact path={'/article/:details'}>
             <DetailsCard singleArticle={singleArticle}/>
           </Route>
-        </main>  
-      }
-    
-      </>
+          <Route path='*'>
+            <Error />
+          </Route>
+        </Switch>
+      </main>  
+    </>
   )
 }
 
