@@ -6,5 +6,5 @@ const Error = () => {
         <p className='error'>Something went wrong... please refresh the page!</p>
     )
 }
-
+  
 export default Error
