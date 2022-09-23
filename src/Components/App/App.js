@@ -32,7 +32,7 @@ const App = () => {
     <>
       <Header />
       <main className='App'>
-        <Switch>
+        <Switch>  
           <Route exact path='/'>
             <Dropdown getCategory={getCategory}/>
             <Articles newArticles={articles} selectArticle={selectArticle}/>  
