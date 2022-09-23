@@ -4,6 +4,7 @@ import './ArticlesCard.css';
 
 const ArticlesCard = ( {title, byline, multimedia, selectArticle} ) => {
   return (
+    <section className='article-container'>
     <div className='articles-card'>
       <p className='title'>{title}</p>
       <Link to ='/article/details'>
@@ -11,6 +12,7 @@ const ArticlesCard = ( {title, byline, multimedia, selectArticle} ) => {
       </Link> 
       <p className='byline'>{byline}</p> 
     </div>
+    </section>
   )
 }
 

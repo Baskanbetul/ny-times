@@ -1,0 +1,15 @@
+.article-image {
+ height: 30rem;
+ width: 50rem;
+ 
+}
+
+.details-card {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.article-link {
+  color: blue;
+  font-size: 1.5em;
+}

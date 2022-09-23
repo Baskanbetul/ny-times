@@ -1,7 +1,12 @@
 header {
   display: flex;
-  color: rgb(77, 54, 144);
+  color: black;
   padding: 3em;
   font-size: 2.5em;
   justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }

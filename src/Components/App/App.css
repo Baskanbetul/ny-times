@@ -5,13 +5,3 @@ body {
   background-size: cover;
   margin: 0;
 }
-
-
-.font-link {
-  font-family: 'Newsreader', serif;
-  font-family: 'Roboto', sans-serif;
-}
-
-.app {
-  display: flex;
-}

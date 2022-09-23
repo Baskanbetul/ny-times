@@ -18,6 +18,7 @@ const App = () => {
   const getCategory = (category) => {
     getTopStories(category) 
     .then(data => {
+      console.log(data,"DAT")
     setArticles(data.results)
     })
   }

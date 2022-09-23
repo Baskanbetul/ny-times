@@ -1,5 +1,6 @@
 import React from "react";
 import ArticlesCard from '../ArticlesCard/ArticlesCard';
+import './Articles.css';
 
 const Articles = ( {newArticles, selectArticle} ) => {
   const articlesCard = newArticles.map((article, i) => {
