@@ -1,6 +1,8 @@
 # NY Times News Reader
 
-![NYT Reader](file:///Users/betulbaskan/Desktop/Screen%20Shot%202022-09-22%20at%209.33.40%20PM.png)
+<img width="1393" alt="Screen Shot 2022-09-22 at 9 53 28 PM" src="https://user-images.githubusercontent.com/96634191/191889323-d3e33c16-ca6d-431c-8fd8-51dac36cbf39.png">
+
+<img width="1397" alt="Screen Shot 2022-09-22 at 10 02 36 PM" src="https://user-images.githubusercontent.com/96634191/191890056-b94028a1-1720-43a3-a9c8-eff9a18a4c98.png">
 
 ## Table of Contents
 
@@ -40,6 +42,8 @@ The project spec can be found [here](https://mod4.turing.edu/projects/take_home/
 - Displays the data from API 
 - Multiple views handled by Router
 
+<img width="954" alt="Screen Shot 2022-09-22 at 9 59 49 PM" src="https://user-images.githubusercontent.com/96634191/191889843-9799b469-e44f-445d-9d6e-cb6c89e3e112.png">
+
 ## Possible Future Extensions
 - I would like to add  an extension in the future that can 'Save for Later' when viewing an article's details
 - I would enjoy building out testing for all sad paths, and the happy paths 
@@ -56,5 +60,4 @@ The project spec can be found [here](https://mod4.turing.edu/projects/take_home/
 
 ## Additional Resources
 - [Wireframe](https://www.figma.com/file/wjKBeskw9KOYqd6KiaVwoe/Untitled?node-id=0%3A1)
-
-
+![Screen Shot 2022-09-22 at 10 07 59 AM](https://user-images.githubusercontent.com/96634191/191890124-afd06d6b-c042-4c5a-9d7c-947c0d978c10.png)
