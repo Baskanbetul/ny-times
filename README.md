@@ -1,5 +1,7 @@
 # NY Times News Reader
 
+![NYT Reader](file:///Users/betulbaskan/Desktop/Screen%20Shot%202022-09-22%20at%209.33.40%20PM.png)
+
 ## Table of Contents
 
   - [Introduction](#introduction)
@@ -54,3 +56,5 @@ The project spec can be found [here](https://mod4.turing.edu/projects/take_home/
 
 ## Additional Resources
 - [Wireframe](https://www.figma.com/file/wjKBeskw9KOYqd6KiaVwoe/Untitled?node-id=0%3A1)
+
+
